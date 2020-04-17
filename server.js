@@ -10,8 +10,6 @@ connectDB();
 // Init Middleware  // used to be body-parser, but now included with express
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => res.json({ msg: 'Welcome to the Contact Keeper API' }))
-
 // Define Routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
